@@ -4,7 +4,9 @@ const FormularioTareas = (props) => {
 	const [nombreTarea, setNombreTarea] = useState("");
 
 	const guardarTarea = (e) => {
-		const auxTarea = e.target.value;
+		const auxTarea = {};
+		auxTarea.label = e.target.value;
+		auxTarea.done = false;
 
 		setNombreTarea(auxTarea);
 	};
